@@ -1,23 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
-
+import { Routes, Route } from "react-router-dom";
+import Home from './Components/Pages/Home';
+import Footer from './Components/Footer/Footer';
+import Nav from './Components/Nav';
+import NotFound from './PageNotFound';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App bg-gradient-to-br from-orange-200 to-orange-100">
+      <Nav />
+      <Routes>
+        <Route path="/" element={<Home />} />
+
+       <Route path="*" element={<NotFound />} />  
+      </Routes>
+      <Footer />
     </div>
   );
 }
