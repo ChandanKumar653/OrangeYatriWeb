@@ -1,6 +1,8 @@
 import React from "react";
 import '../../Fonts.css';
+import { useMediaQuery } from "@mui/material";
 export default function Hero() {
+   const isBig= useMediaQuery("(min-width: 600px)");
   return (
     <div className="w-full h-[100%] flex flex-col md:flex-row md:justify-between md:px-20 lg:px-40 mt-5 md:mt-28">
       <div className="w-full md:w-1/2 lg:w-2/3">
@@ -36,11 +38,11 @@ export default function Hero() {
           </div>
         </div>
       </div>
-      <div className="w-full md:w-1/2 lg:w-1/3 mt-8 md:mt-0 md:ml-10">
+      <div className="w-full md:w-1/3 lg:w-1/5 md:ml-1" style={{marginTop:isBig?-40:"2rem"}}>
         <img
           className="w-full md:h-auto rounded-lg shadow-md"
           alt="app"
-          src="https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/p/p/f/-original-imahyaaxj2kcvvuw.jpeg?q=70"
+          src="https://orange-yatri.s3.ap-south-1.amazonaws.com/tollAppHome.jpg"
         />
       </div>
     </div>

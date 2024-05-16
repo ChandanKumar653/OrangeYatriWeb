@@ -1,6 +1,8 @@
 import React from "react";
 import "../../Fonts.css";
+import { useMediaQuery } from "@mui/material";
 export default function Aboutus() {
+    const isBig = useMediaQuery("(min-width: 600px)");
   return (
     <>
       <div className="w-full h-[100%] flex flex-col md:flex-row md:justify-between md:px-20 lg:px-40 mt-5 md:mt-24">
@@ -38,11 +40,14 @@ export default function Aboutus() {
           </div> */}
           </div>
         </div>
-        <div className="w-full md:w-1/2 lg:w-1/3 mt-8 md:mt-0 md:ml-10">
+        <div
+          className="w-full md:w-1/4 lg:w-1/6  md:ml-1"
+          style={{ marginTop: isBig ? -40 : "2rem" }}
+        >
           <img
             className="w-full md:h-auto rounded-lg"
             alt="app"
-            src="https://png.pngtree.com/png-clipart/20210309/original/pngtree-three-mobile-phone-mockup-perspective-blue-color-png-image_5850645.png"
+            src="https://orange-yatri.s3.ap-south-1.amazonaws.com/orangeyatri.jpg"
           />
         </div>
       </div>
